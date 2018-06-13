@@ -1,7 +1,14 @@
 
+
+<input type="text" name="serverNameInput" 
+        id="input${1/(\w+)/\u\1/g}" class="form-control" 
+        value="" required="required" pattern="" title=""
+        (input)="onUserInput($event)">
+
 <button type="button" class="btn btn-default"
  [disabled]="!allowNewServer" (click)="onServerCreated($event)">Add New Server</button>
- <p>You may add server now : {{ allowNewServer }}</p>
+ 
+ <p>New server name is : {{ serverName }}</p>
 
 <app-server></app-server>
 <app-server></app-server>
