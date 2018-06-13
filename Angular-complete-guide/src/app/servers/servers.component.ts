@@ -16,9 +16,9 @@ export class ServersComponent implements OnInit {
     }, 2000);
   }
 
-  onServerCreated = (e): void => {
+  onServerCreated = (event: Event): void => {
     this.allowNewServer = false; 
-    console.log("New server was created!!");
+    console.log("New server was created by target " + (<HTMLButtonElement>event.target));
   }
 
   ngOnInit() {
