@@ -1,3 +1,15 @@
+-----------------------------------------------------------------------------------------
+GLOBAL EVENT ATTRIBUTES - 
+https://www.w3schools.com/tags/ref_eventattributes.asp
+eg : OnClick, onFocus etc
+
+HTML GLOBAL ATTRIBUTES - 
+https://www.w3schools.com/tags/ref_standardattributes.asp
+eg : style, title, accessKey
+
+------------------------------------------------------------------------------------------
+
+
 # AngularCompleteGuide
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
