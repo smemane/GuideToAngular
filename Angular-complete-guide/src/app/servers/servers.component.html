@@ -3,7 +3,7 @@
 <input type="text" name="serverNameInput" 
         id="input${1/(\w+)/\u\1/g}" class="form-control" 
         value="" required="required" pattern="" title=""
-        (input)="onUserInput($event)">
+        [(ngModel)]="serverName">
 
 <button type="button" class="btn btn-default"
  [disabled]="!allowNewServer" (click)="onServerCreated($event)">Add New Server</button>
