@@ -9,17 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  allowNewServer: boolean = false;
+  serverNames: Array<string> = [];
+  noOfServers: number = 0;
   serverName: string = "";
   constructor() { 
     setTimeout(() => {
-      this.allowNewServer = true;
     }, 2000);
   }
 
   onServerCreated = (event: Event): void => {
-    this.allowNewServer = false; 
-    console.log("New server was created by target " + (<HTMLButtonElement>event.target));
+    this.noOfServers = this.noOfServers + 1; 
+    //capture the value from the target input
+    this.serverNames.push(this.serverName);
+    console.log(this.serverNames);
   }
 
   ngOnInit() {

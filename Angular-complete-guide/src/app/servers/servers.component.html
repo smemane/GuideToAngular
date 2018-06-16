@@ -6,7 +6,7 @@
         [(ngModel)]="serverName">
 
 <button type="button" class="btn btn-default"
- [disabled]="!allowNewServer" (click)="onServerCreated($event)">Add New Server</button>
+ [disabled]="noOfServers > 5" (click)="onServerCreated($event)">Add New Server</button>
  
  <p>New server name is : {{ serverName }}</p>
 
