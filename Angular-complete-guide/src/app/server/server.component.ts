@@ -8,15 +8,10 @@ import { Component } from '@angular/core';
 export class serverComponent {
     serverId: number = 11;
     status: string = "offline";
-    toggleStatus = (): string => {
-        switch(this.status) {
-            case "offline":
-                this.status = "online";
-            break;
-            case "online":
-                this.status = "offline"
-            break;
-        }
-        return this.status;
+    constructor() {
+        this.status = Math.random() > 0.5 ? "online": "offline";
+    }
+    getColor = (): string => {
+        return this.status === "offline" ? "red" : "green";
     };
 }
