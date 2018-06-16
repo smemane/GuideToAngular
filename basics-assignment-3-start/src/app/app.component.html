@@ -1,0 +1,13 @@
+<button type="button" class="btn btn-default"
+        (click)="toggleParagraph()">
+  Display Details
+</button>
+<p *ngIf="showParagraph">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  Eos fugit placeat earum iste quam minus voluptates distinctio eveniet maxime, 
+  aliquam velit nam exercitationem corporis provident. Dicta delectus libero sequi asperiores?
+</p>
+<div *ngFor="let click of buttonClicks">
+  <p [ngStyle]="{backgroundColor: getColor(click)}"
+    [ngClass]="{ whiteColor: click > 5}">{{click}}</p>
+</div>
