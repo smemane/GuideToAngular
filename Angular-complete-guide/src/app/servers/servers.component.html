@@ -8,7 +8,7 @@
 <button type="button" class="btn btn-default"
  [disabled]="noOfServers > 5" (click)="onServerCreated($event)">Add New Server</button>
  
- <p>New server name is : {{ serverName }}</p>
+ <p *ngIf="noOfServers > 0">New server {{ serverName }} was added</p>
 
 <app-server></app-server>
 <app-server></app-server>
