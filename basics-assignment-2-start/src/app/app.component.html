@@ -1,0 +1,15 @@
+<input type="text" name="userNameInput" 
+        id="input${1/(\w+)/\u\1/g}" class="form-control" 
+        value="" required="required" pattern="" title=""
+        [(ngModel)]="userName">
+<p>UserName is {{ userName }}</p>
+
+<button type="button" 
+        class="btn btn-default"
+        [disabled]="userName===''"
+        (click)="resetUserName()">
+        Reset UserName
+</button>
+
+
+
