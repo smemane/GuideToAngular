@@ -7,15 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   showParagraph: boolean = false;
-  buttonClicks: Array<number> = [];
-  count: number = 0;
+  buttonClicks: Array<Date> = [];
   toggleParagraph = (): void => {
     this.showParagraph = !this.showParagraph;
-    this.count +=1;
-    this.buttonClicks.push(this.count);
+    this.buttonClicks.push(new Date());
   }
   getColor = (index) => {
     console.log(index);
-    return index > 5 ? 'blue': 'white';
+    return index > 4 ? 'blue': 'white';
   }
 }
