@@ -8,7 +8,9 @@
 <button type="button" class="btn btn-default"
  [disabled]="noOfServers > 5" (click)="onServerCreated($event)">Add New Server</button>
  
- <p *ngIf="noOfServers > 0">New server {{ serverName }} was added</p>
+ <p *ngIf="noOfServers > 0; else noServer">New server {{ serverName }} was added</p>
+ <ng-template #noServer>
+         <p>No server was created !</p>
+ </ng-template>
 
-<app-server></app-server>
 <app-server></app-server>
